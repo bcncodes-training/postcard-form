@@ -6,26 +6,28 @@ Partiendo del html que se facilita construir el siguiente formulario:
 
 Add the above code into the body of your HTML.
 
-Organizing your assetsSection
-This is where the fun begins! Before we start coding, we need three additional assets:
+## Organiza los recursos que necesitas:
+- El fondo de postal: guardado en el directorio de trabajo del HTML.
+- Obtener la fuente de escritura de máquina de escribir: The "Secret Typewriter" de la página [fontsquirrel](www.fontsquirrel.com )
+- Obtener la fuente de escritura a mano: The "Journal"  de la página [fontsquirrel](www.fontsquirrel.com )
 
-The postcard background — download this image and save it in the same directory as your working HTML file.
-A typewriter font: The "Secret Typewriter" font from fontsquirrel.com — download the TTF file into the same directory as above.
-A handdrawn font: The "Journal" font from fontsquirrel.com — download the TTF file into the same directory as above.
-Your fonts need some more processing before you start:
+_Para procesar las fuentes seguir los pasos siguientes: _
 
-Go to the fontsquirrel Webfont Generator.
-Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
-Unzip the provided zip file.
-Inside the unzipped contents you will find two .woff files and two .woff2 files. Copy these four files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximise browser compatibility; see our Web fonts article for a lot more information.
-The CSSSection
-Now we can dig into the CSS for the example. Add all the code blocks shown below inside the <style> element, one after another.
+1. Utilizar el generador de fuentes de fontsquirrel: __fontsquirrel Webfont Generator__.
+2. Utilizando el formulario subir ambos ficheros de las fuentes y generar un _webfont kit_. Descargar al ordenador
+3. Hacer unzip del fichero.
+4. Dentro del contenido copiar los cuatro ficheros: dos .woff y dos .woff2 a una carpeta fonts dentro del directorio de trabajo.
 
-First, we prepare the ground by defining our @font-face rules, all the basics on the <body> element, and the <form> element:
-Now we can position our elements, including the title and all the form elements:
-  That's where we start working on the form elements themselves. First, let's ensure that the <label>s are given the right font:
-  
-  The text fields require some common rules. Simply put, we remove their borders and backgrounds, and redefine their padding and margin:
-When one of these fields gains focus, we highlight them with a light grey, transparent, background. Note that it's important to add the outline property, in order to remove the default focus highlight added by some browsers:
-<textarea> elements default to being rendered as a block element. The two important things here are the resize and overflow properties. Because our design is a fixed-size design, we will use the resize property to prevent users from resizing our multi-line text field. The overflow property is used to make the field render more consistently across browsers. Some browsers default to the value auto, while some default to the value scroll. In our case, it's better to be sure every one will use auto:
-  The <button> element is really convenient with CSS; you can do whatever you want, even using pseudo-elements:
+## La sección CSS
+
+1.- Preparar las reglas @font-face rules, el elemento reset `<body>` y el `<form>` (w: 740px h:498px y bck: imagen + color white):
+2. Posicionar los elementos del título y del form
+3. Trabajar los elementos del form:
+    - Fuente título: 1 em typewriter, sans-serif
+    - Labels .8 em typewriter, sans-serif
+    - Eliminar bordes y fondo de los campos de texto. Redefinir padding y margen.
+    - Resaltar los campos con foco con un background light grey, transparent (utilizar la propiedad outlinge para eliminar el borde).
+    - El elemento `<textarea>` debe renderizarse como elemento de bloque al que se debe anular las propiedad resize. 
+    - Utilizar pseudo-elementos para añadir los ">>>" al botón. 
+    - El botón rota -1.5deg.
+
