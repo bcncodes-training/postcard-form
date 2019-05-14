@@ -1,1 +1,37 @@
+@font-face {
+    font-family: VetTypeWriter;
+    src: url(./veterantypewriter.woff2);
+}
+@font-face {
+    font-family: Journal;
+    src: url(./journal-webfont.woff2);
+}
+body{margin: 0;padding: 0;}
+form{width: 740px;height: 498px;background-image: url(./background.jpg);}
+form>img{position: absolute;z-index: -1;}
 
+h1{font: 1em VetTypeWriter;padding-left: 14px;}
+.container{display: flex;}
+.container > section{width: 47%;}
+.container > section:nth-child(1){margin: 55px 0 0 20px;}
+#msg{display: block;/*! outline: 0 none transparent; */width: 334px;height: 327px;resize: none;}
+.container > section:nth-child(2){margin: 187px 0px 0 35px;width: 40%;line-height: 2em;}
+p label{font: 0.8em VetTypeWriter;}
+input,#msg{background-color: #fff0;border: none;font: 1.5em Journal;}
+input:hover{background: #d3d3d380;}
+
+#sendButton{transform: translate(2.5em,1.1em)rotate(-1.5deg);}
+#sendButton a{text-decoration: none;font: 12px Helvetica,sans serif;color: #000;border: 2px solid;border-radius: 3px;padding: 5px;transform: translate(2em,2em)rotate(10deg);}
+#sendButton a:after{content: '>>>';padding-left: 5px;}
+/*
+1.- Preparar las reglas @font-face rules, el elemento reset <body> y el <form> (w: 740px h:498px y bck: imagen + color white): 
+2. Posicionar los elementos del título y del form 
+3. Trabajar los elementos del form: 
+    - Fuente título: 1 em typewriter, sans-serif 
+    - Labels .8 em typewriter, sans-serif 
+    - Eliminar bordes y fondo de los campos de texto. Redefinir padding y margen. 
+    - Resaltar los campos con foco con un background light grey, transparent (utilizar la propiedad outlinge para eliminar el borde). 
+    - El elemento <textarea> debe renderizarse como elemento de bloque al que se debe anular las propiedad resize. 
+    - Utilizar pseudo-elementos para añadir los ">>>" al botón. 
+    - El botón rota -1.5deg.
+*/

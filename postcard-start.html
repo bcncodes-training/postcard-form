@@ -2,22 +2,42 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Postcard example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style.css">
+  <title>Postcard example</title>
 </head>
 
 <body>
-    <form>
-  <h1>to: Lorem Ipsum</h1>
-    <!-- input tipo text con el texto "from:" -->
+  <form>
+    <div class="container">
+      <section>
+        <!-- textarea para el texto "Your message:"-->
+        <p>
+          <label for="msg">Your message:</label>
+          <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+        </p>
 
-    <!-- input tipo mail para el texto "reply:" -->
+      </section>
+      <section>
+        <h1>to: Lorem Ipsum</h1>
+        <!-- input tipo text con el texto "from:" -->
+        <p>
+          <label for="from">&nbsp;from:</label>
+          <input type="text" name="from" id="from">
+        </p>
+        <!-- input tipo mail para el texto "reply:" -->
+        <p>
+          <label for="reply">reply:</label>
+          <input type="text" name="reply" id="reply">
+        </p>
 
-    <!-- textarea para el texto "Your message:"-->
-
-     <!-- botón tipo submit para el texto "Send your message" -->
-        
-    </form>
+        <!-- botón tipo submit para el texto "Send your message" -->
+        <p id="sendButton">        
+          <a href="">Send your message</a>
+      </p>
+      </section>
+    </div>
+  </form>
 
 </body>
 
