@@ -1,1 +1,119 @@
+/*
+## La sección CSS
+
+1.- Preparar las reglas @font-face rules, el elemento reset `<body>` y el `<form>` (w: 740px h:498px y bck: imagen + color white):
+2. Posicionar los elementos del título y del form
+3. Trabajar los elementos del form:
+    - Fuente título: 1 em typewriter, sans-serif
+    - Labels .8 em typewriter, sans-serif
+    - Eliminar bordes y fondo de los campos de texto. Redefinir padding y margen.
+    - Resaltar los campos con foco con un background light grey, transparent (utilizar la propiedad outlinge para eliminar el borde).
+    - El elemento `<textarea>` debe renderizarse como elemento de bloque al que se debe anular las propiedad resize. 
+    - Utilizar pseudo-elementos para añadir los ">>>" al botón. 
+    - El botón rota -1.5deg.
+
+*/
+@font-face {
+    font-family: "veteran_typewriter";
+    src: url("./fonts/veteran_typewriter-webfont.woff2");
+}
+@font-face {
+    font-family: "journal";
+    src: url("./fonts/journal-webfont.woff2");
+}
+body{
+	margin: 0;padding: 0;
+}
+main{
+	/*background-image: url("./background.jpg");*/
+	/*background-color: black;*/
+	margin:20px;
+}
+main>form{
+	width: 740px;
+	height: 498px;
+	background-image: url("./background.jpg");
+	/*background-position: center;*/
+	/*background-size:cover;*/
+	background-color: white;
+	z-index:0;
+}
+/*main>form>img{position: absolute;z-index: -1;}*/
+
+/*****2.posicionamiento******/
+/*form{
+	position:relative;
+	top:110px;
+	left:100px;
+}*/
+h1{
+	top: 194px;
+    	left: 408px;
+    	position: relative;
+    	font-size: 1.6em;
+}
+main form .c_From{
+	top: 180px;
+	left: 401px;
+ 	/*z-index: 2;*/
+
+}
+main form .c_Reply{
+	top: 185px;
+ 	left: 392px;
+ 	/*z-index: 2;*/
+
+}
+main form .c_Message{
+	top: -40px;
+   	left: 15px;
+    	/*z-index: 1;*/
+
+}
+main form button{
+	position: relative;
+	top: -80px;
+    	left: 442px;
+	border-radius: 5px;
+    background-color: transparent;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    transform: rotate(-1.5deg);
+	
+}
+/******3.form elements*******/
+label, h1 {
+    font-family: "veteran_typewriter",sans-serif;
+}
+input[name=from], input[name=reply], .c_Message > textarea {
+    font-family: "journal",sans-serif;
+    border: none;
+    background: none;
+    width: 258px;
+    font-size: 2em;
+}
+
+.c_Message,p{
+	position:relative;
+	font-size:1em;
+	margin:0px;
+}
+.c_Message>textarea{
+	overflow:hiden;
+	display:block;
+	width: 320px;
+	height: 300px;
+	resize:none;
+}
+input[name='from']:focus , input[name='reply']:focus, .c_Message > textarea:focus {
+    background-color: lightgray;
+    /*outline: transparent;*/
+}
+
+
+button::after {
+    margin-left: 5px;
+    content: ">>>";
+}
 
