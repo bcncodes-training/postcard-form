@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Postcard example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Postcards from Italy</title>
 </head>
 
 <body>
+  <div class="contain">
     <form>
-  <h1>to: Lorem Ipsum</h1>
-    <!-- input tipo text con el texto "from:" -->
+        <div class="message">
+          <label for="message">
+            Your message : 
+          </label>
+          <textarea name="message" id="message" cols="36" rows="7"></textarea>
+        </div>
 
-    <!-- input tipo mail para el texto "reply:" -->
+        <div class="info">
+          <h1>
+            <label for="to">to :</label>
+            <input type="text" name="" id="to">
+          </h1>
 
-    <!-- textarea para el texto "Your message:"-->
-
-     <!-- botón tipo submit para el texto "Send your message" -->
-        
+          <h1>
+            <label for="from">from :</label>
+            <input type="text" name="from" id="from">
+          </h1>
+          
+          <h1>
+            <label for="replay">replay :</label>
+            <input type="text" name="replay" id="replay">
+          </h1>
+          <div class="send"><input type="submit" value="Send your message"><span></span></div>
+        </div>
     </form>
+  </div>
+    
 
 </body>
 
