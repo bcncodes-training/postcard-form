@@ -1,1 +1,141 @@
 
+body{
+    
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    background-color: rgb(99, 96, 96);
+    width:80vw;
+    height:80vh;
+    display:inline-flex;
+    justify-content: center;
+    font-family: 'veteran_typewriterregular';
+    
+}
+h1{
+    font-family: 'veteran_typewriterregular';
+    font-size: 1em; 
+    padding-bottom: 3vh;
+    margin-left:2vw;
+}
+form{
+    margin-top:5em;
+    list-style-type: none;
+    background-color:whitesmoke;
+    background: url(background.jpg) no-repeat center center;
+    background-size: contain;
+    border: 1px solid #333;
+    width:740px;
+    height:498px;
+    display:flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+
+}
+.juntos{
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-flow:column nowrap;
+    /*align-content:space-around; */
+    align-content: center;
+    width:25vw;
+    height: 40vh;
+    margin-top:22vh;
+    left:44em;
+    
+   /* position: absolute;*/
+}
+.escrito{
+    width:25vw;
+    height: 35vh;
+    right: 40rem;
+    display: flex;
+    flex-flow: column nowrap;
+   /* position:absolute;*/
+}
+.lineal{
+    display: inline-flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    margin-bottom: 4vh;
+    width: 30vw;
+    
+    
+}
+
+.escrito {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start;
+}
+#id_textArea{
+    resize: none;
+    width:20vw;
+    height:50vh;
+    border:0;
+    margin-left:3vw;
+    margin-top:2vh;
+    background: transparent;
+   /* position:absolute;*/
+    
+    
+}
+#mover{
+    
+    margin-bottom: 5vh;
+    margin-left:-20px;  
+ 
+}
+label{
+
+padding-left: 15px;
+text-indent: -15px;
+position: relative;
+margin-right:5px;
+    
+}
+.lineal input{
+    border:0;
+    background: transparent;
+    width:25vw;
+    height:3vh;
+    padding: 0 0 0 2vw;
+    margin:0;
+    vertical-align: bottom;
+    top: -1px;
+    overflow: hidden;
+
+}
+.lineal1{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width:30vw;
+    padding: 0 0 0 2vw;
+
+}
+.lineal1 input{
+    border:0;
+    background: transparent;
+    width:25vw;
+    height:3vh;
+    padding: 0 0 0 2vw;
+    margin:0;
+    vertical-align: bottom;
+    top: -1px;
+    overflow: hidden;
+}
+
+#bot{
+    border-radius:5px;
+    width:15vw;
+    height: 5vh;
+    border:1px solid #333;
+    margin-top: 20px;
+    transform: rotate(-1.5deg);
+    margin-left: 3vw;
+    
+
+}

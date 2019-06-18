@@ -4,19 +4,33 @@
 <head>
     <meta charset="utf-8">
     <title>Postcard example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./webfontkit/stylesheet.css">
 </head>
 
 <body>
     <form>
+      <div class="juntos">
   <h1>to: Lorem Ipsum</h1>
     <!-- input tipo text con el texto "from:" -->
-
+    <div class="lineal">
+   <label for="from">From:</label>
+   <input type="text" name="From" id="id_from">   
+  </div>
     <!-- input tipo mail para el texto "reply:" -->
-
-    <!-- textarea para el texto "Your message:"-->
-
+  <div class="lineal1" id="mover">
+<label for="id_reply">Reply:</label>
+<input type="email" name="Reply" id="id_reply">
+</div>
      <!-- botón tipo submit para el texto "Send your message" -->
-        
+        <input type="submit" value="Send your message" id="bot">
+</div>
+        <div class="escrito">
+            <!-- textarea para el texto "Your message:"-->
+<label for="id_textArea">Your message:</label>
+<textarea name="Message" id="id_textArea" ></textarea>
+ 
+        </div>
     </form>
 
 </body>
